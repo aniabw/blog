@@ -24,6 +24,9 @@ Route::get('/five1', function () {
 		return view('five1', ['name' => 'Ania']);
 });	
 
+
+
+
 	/*it can be also this way:
 	 $name = 'Ania';
 	 return view('five', compact('name'));
@@ -90,6 +93,22 @@ Route::get('/tasks/{task}', function ($id) {
    
 */
 Route::get('/tasks', 'TasksController@index');
+
+Route::get('/ajax',function(){
+    return view('tasks.ajax');
+ });
+
+Route::get('/ajax2',function(){
+    return view('tasks.ajax2');
+ });
+
+Route::post('/getmsg','TasksController@ajaxresponses');
+
+
+Route::get('/jq','TasksController@getBody');
+
+
+
 Route::get('/tasks/{task}', 'TasksController@show');
 
 Route::get('/posts','PostsController@index')->name('home');

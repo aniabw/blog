@@ -10,6 +10,9 @@ class PostsController extends Controller
 {
     public function footester() 
     {
+        $name = 'Jon';
+        echo $name;
+
         return 23588888;
     }
 

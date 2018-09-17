@@ -6,8 +6,8 @@
         
 		
 
-        @foreach ($posts as $post)
-		  @include ('posts.singlepost') 
+       @foreach ($posts as $post)
+		      @include ('posts.singlepost') 
         @endforeach
          
 

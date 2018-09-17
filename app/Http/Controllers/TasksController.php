@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests;
 use App\Task;
 
 class TasksController extends Controller
@@ -13,6 +14,36 @@ class TasksController extends Controller
         
 		return view('tasks.index', compact('tasks'));
 	}
+
+
+	/****************************/
+
+	public function getBody()
+	{
+	
+		$title = "HDTuto.com";
+	
+		$view = view("tasks.ajaxView",compact('title'))->render();
+	
+		return response()->json(['html'=>$view]);
+	
+	}
+
+	public function ajaxresponses()
+	{
+		/*
+		$tasks = 'taskk';
+        echo "hell";
+		return view('tasks.ajax', ['name' => 'Ania']);
+        */
+		
+
+		$msg = "This is a simple message.";
+        return response()->json(array('msg'=> $msg), 200);
+		
+       
+	}
+
 	/*
 	public function show($id)
 	{

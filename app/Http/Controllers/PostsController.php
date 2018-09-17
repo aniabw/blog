@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Post; 
+use App\Post;
+
 
 class PostsController extends Controller
 {
@@ -12,6 +13,7 @@ class PostsController extends Controller
 		
 		$this->middleware('auth')->except(['index','show']);
 	}	
+
 	 
     public function index() 
 	{
@@ -63,5 +65,6 @@ class PostsController extends Controller
 		
 		return redirect('/posts');
 	}
+
 
 }

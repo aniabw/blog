@@ -14,17 +14,19 @@ class ExampleTest extends TestCase
      */
     public function testBasicTest()
     {
-        /*$response = $this->get('/');
+        $response = $this->get('/');
+
+        $foo = 'bar';
 
         $response->assertStatus(200);
-		*/
+		
 		
 		//second test
 		//$this->get('/')->assertSee('The Bootstrap Blog'); //failing
 		
 		//$this->get('/')->assertSee('Laravel');  //OK
 		
-		$this->get('/posts')->assertSee('The Bootstrap Blog'); //OK
+		//$this->get('/posts')->assertSee('The Bootstrap Blog'); //OK
 		
     }
 }
